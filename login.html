@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login / Register</title>
+  <link rel="stylesheet" href="css/login_resident.css" />
+</head>
+<body>
+<div class="container">
+  <h1>Login / Register</h1>
+  <div class="tabs">
+    <button onclick="showAuthTab('loginBox')">Login</button>
+    <button onclick="showAuthTab('registerBox')">Register</button>
+    <button onclick="showAuthTab('resetBox')">Reset Password</button>
+  </div>
+
+  <form id="loginBox" class="auth-box">
+    <h2>Login</h2>
+    <label>Username</label><input type="text" id="login_username" required />
+    <label>Password</label><input type="password" id="login_password" required />
+    <button type="submit">Login</button>
+    <p id="loginMessage" class="message"></p>
+  </form>
+
+  <form id="registerBox" class="auth-box" style="display:none;">
+    <h2>Register</h2>
+    <label>Username</label><input type="text" id="reg_username" required />
+    <label>Password</label><input type="password" id="reg_password" required />
+    <label>Full Name</label><input type="text" id="reg_fullname" required />
+    <label>Phone Number</label><input type="text" id="reg_phone" required />
+    <label>Email</label><input type="email" id="reg_email" required />
+    <label>User Type</label>
+    <select id="reg_type" required>
+      <option value="nonresident">Non-resident</option>
+      <option value="resident">Resident</option>
+    </select>
+    <label>Block (resident only)</label><input type="text" id="reg_block" placeholder="e.g. Block A" />
+    <button type="submit">Create Account</button>
+    <p id="registerMessage" class="message"></p>
+  </form>
+
+  <form id="resetBox" class="auth-box" style="display:none;">
+    <h2>Reset Password</h2>
+    <label>Username</label><input type="text" id="reset_username" required />
+    <label>New Password</label><input type="password" id="reset_password" required />
+    <button type="submit">Reset Password</button>
+    <p id="resetMessage" class="message"></p>
+  </form>
+
+  <p><a href="index.html">Back to Home</a></p>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/supabaseClient.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/login.js"></script>
+</body></html>

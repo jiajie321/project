@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Payment</title>
+  <link rel="stylesheet" href="css/detail.css" />
+</head>
+<body>
+
+<header>
+  <div class="navbar">
+    <a href="index.html">Home Page</a>
+    <a href="cancel_booking.html" data-protected>Cancel Booking</a>
+    <a href="view_booking_history.html" data-protected>View Booking History</a>
+    <a href="submit_feedback.html" data-protected>Feedback</a>
+    <a href="about_us.html">About Us</a>
+    <a href="announcements.html">Announcements</a>
+    <span class="welcome" id="authArea"><a href="login.html" style="color:white;">Sign Up</a></span>
+  </div>
+</header>
+
+<div class="container" style="max-width:700px;margin:40px auto;">
+  <h1>Payment</h1>
+  <div id="paymentSummary"><p>Loading booking...</p></div>
+  <form id="paymentForm" style="display:none;">
+    <label>Payment Method</label>
+    <select id="payment_method"><option>Online Banking</option><option>Credit / Debit Card</option><option>Cash</option></select>
+    <button type="submit">Pay Now</button>
+    <p id="paymentMessage" class="message"></p>
+  </form>
+</div>
+<footer><p>&copy; 2026 Condominium Facilities Booking System. All rights reserved. | Created by JiaJie</p></footer>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/supabaseClient.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/payment.js"></script>
+</body></html>

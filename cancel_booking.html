@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cancel Booking</title>
+  <link rel="stylesheet" href="css/cancel_booking.css" />
+</head>
+<body>
+
+<header>
+  <div class="navbar">
+    <a href="index.html">Home Page</a>
+    <a href="cancel_booking.html" data-protected>Cancel Booking</a>
+    <a href="view_booking_history.html" data-protected>View Booking History</a>
+    <a href="submit_feedback.html" data-protected>Feedback</a>
+    <a href="about_us.html">About Us</a>
+    <a href="announcements.html">Announcements</a>
+    <span class="welcome" id="authArea"><a href="login.html" style="color:white;">Sign Up</a></span>
+  </div>
+</header>
+
+<h1>Cancel Booking</h1>
+<div class="form-container">
+  <p>Only active bookings under your account are shown here.</p>
+  <div id="cancelList"><p>Loading bookings...</p></div>
+</div>
+<footer><p>&copy; 2026 Condominium Facilities Booking System. All rights reserved. | Created by JiaJie</p></footer>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/supabaseClient.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/cancel_booking.js"></script>
+</body></html>
